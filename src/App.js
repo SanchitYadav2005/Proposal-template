@@ -3,7 +3,7 @@ import please from "./assests/please-pleaseplease.gif";
 import celebrate from "./assests/mochi-peach.gif";
 import celebrateMore from "./assests/peach-goma.gif";
 import { useState } from "react";
-import texts from 'textbelt';
+
 
 
 function App() {
@@ -14,16 +14,14 @@ function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("I'll be back on 20 to meet you.");
 
- const sendMessage = async () => {
-  texts.sendText('9528016139', 'she said yes')
- } 
+
   const handleYes = () => {
     setYesClicked(true);
     setIsHidden(true);
     setSrc(celebrate);
     setCount(count + 1);
    
-      sendMessage()
+     
    
     if (count >= 3) {
       setSrc(celebrateMore);
